@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<script>
+    let value = prompt('Type a number', 0);
+    let positiveNumber = value*1;
+    switch (positiveNumber) {
+        case 0:
+            alert(0);
+            break;
+        default:
+            let positiveNumber1 = value*1>0;
+            switch (positiveNumber1){
+                case true:
+                    alert(1);
+                    break;
+                case false:
+                    alert(-1);
+                    break;
+            }
+    }
+</script>
+</body>
+
+</html>
