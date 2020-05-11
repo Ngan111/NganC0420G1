@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>Su kien ban phim</title>
 </head>
-<body onload="DoReady()">
-<img id="Nobita" src="Nobita001.png" style="position: absolute; left: 0; top:0;" height="1024" width="652"/>
+<body >
+<img id="Nobita" src="nobita.jpg" style="position: absolute; left: 0; top:0;" height="281" width="179"/>
 <script>
+    window.onload=DoReady;
     function upArrowPressed() {
         var element =document.getElementById("Nobita");
         element.style.top = parseInt(element.style.top) - 5 +'px';
