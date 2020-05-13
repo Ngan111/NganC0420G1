@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh don gian</title>
+<style>
+    .divtag{
+        border: 3px solid;
+        width: 180px;
+        height: 180px;
+        padding: 80px;
+        background-color: firebrick;
+    }
+    .button{
+        width: 180px;
+        height: 180px;
+    }
+</style>
+</head>
+<body>
+<div class="divtag">
+
+<table>
+    <tr>
+        <td colspan="10"><input type="text"id="KetQua"></td>
+    </tr>
+    <tr>
+        <td><button onclick="Nhap('1')">1</button></td>
+        <td><button onclick="Nhap('2')">2</button></td>
+        <td><button onclick="Nhap('3')">3</button></td>
+        <td><button onclick="Nhap('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="Nhap('4')">4</button></td>
+        <td><button onclick="Nhap('5')">5</button></td>
+        <td><button onclick="Nhap('6')">6</button></td>
+        <td><button onclick="Nhap('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="Nhap('7')">7</button></td>
+        <td><button onclick="Nhap('8')">8</button></td>
+        <td><button onclick="Nhap('9')">9</button></td>
+        <td><button onclick="Nhap('*')">*</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="Delete('C')">C</button></td>
+        <td><button onclick="Nhap('0')">0</button></td>
+        <td><button onclick="TinhToan('=')">=</button></td>
+        <td><button onclick="Nhap('/')">/</button></td>
+    </tr>
+</table>
+<script>
+    let KetQua = document.getElementById("KetQua");
+    function Nhap(so) {
+        KetQua.value +=so;
+    }
+    function TinhToan() {
+        KetQua.value = eval(KetQua.value);
+    }
+    function Delete() {
+        KetQua.value = " ";
+    }
+
+
+
+</script>
+</body>
+</html>

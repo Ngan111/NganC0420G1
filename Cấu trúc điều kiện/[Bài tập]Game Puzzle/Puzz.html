@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzz</title>
+</head>
+<body>
+<table id="table">
+   <tr><td> <img id="img1" onclick="ChangeImg('1')" src="images/cat1.jpg"></tr></td>
+    <tr><td> <img id="img2" onclick="ChangeImg('2')" src="images/cat2.jpg"></tr></td>
+    <tr><td> <img id="img3" onclick="ChangeImg('3')" src="images/cat3.jpg"></tr></td>
+</table>
+<script>
+    function ChangeImg(indexImg) {
+        let img1 = document.getElementById("img1");
+        let img2 = document.getElementById("img2");
+        let img3 = document.getElementById("img3");
+        switch (indexImg) {
+            case "1":
+                if (img1.getAttribute("src") == "images/cat1.jpg") {
+                    img1.src = "images/monkey1.jpg";
+                } else {
+                    (img1.getAttribute("src") == "images/monkey1.jpg")
+                    img1.src = "images/cat1.jpg";
+                }
+                break;
+            case "2":
+                if (img2.getAttribute("src") == "images/cat2.jpg") {
+                    img2.src = "images/monkey2.jpg";
+                } else {
+                    (img2.getAttribute("src") == "images/monkey2.jpg")
+                    img2.src = "images/cat2.jpg";
+                }
+                break;
+            case "3":
+                if (img3.getAttribute("src") == "images/cat3.jpg") {
+                    img3.src = "images/monkey3.jpg";
+                } else {
+                    (img3.getAttribute("src") == "images/monkey3.jpg")
+                    img3.src = "images/cat3.jpg";
+                }
+                break;
+        }
+        if (img1.getAttribute("src") === "images/cat1.jpg" &&
+            img2.getAttribute("src") === "images/cat2.jpg" &&
+            img3.getAttribute("src") === "images/cat3.jpg"
+        ) {
+            document.getElementById("table").style.backgroundColor = "red";
+        } else if (img1.getAttribute("src") === "images/monkey1.jpg" &&
+            img2.getAttribute("src") === "images/monkey2.jpg" &&
+            img3.getAttribute("src") === "images/monkey3.jpg"
+        ) {
+            document.getElementById("table").style.backgroundColor = "Blue";
+        } else {
+            document.getElementById("table").style.backgroundColor = "Black";
+        }
+    }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
