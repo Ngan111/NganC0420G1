@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loops</title>
+</head>
+<h2>JavaScript Loops</h2>
+<body>
+<script>
+    let i=1;
+    let n=2;
+    let count = 0;
+    let check;
+    while(count <20) {
+        check=true;
+        for (let i=2; i<n; i++) {
+            if (n%i === 0) {
+                check=false;
+                break;
+            }
+        }
+        if(check) {
+            count++;
+            document.write(n+" là số nguyên tố");
+            document.write("<br/>");
+        }
+        n++;
+    }
+</script>
+</body>
+</html>
