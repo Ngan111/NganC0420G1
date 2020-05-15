@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+    let value = prompt("Enter a word: ");
+    let Eng = ["Apple", "Orange", "Grape", "Strawberry", "Pear", "Rambutan", "Longan"];
+    let Viet = ["Táo", "Cam", "Nho", "Dâu", "Lê", "Chôm chôm", "Nhãn"];
+    let index = 0;
+
+    for (let i = 0; i<Eng.length; i++) {
+        for (let j = 0; j<Viet.length; j++) {
+            if (value === Eng[i]) {
+                alert(value +" "+"means"+" "+Viet[i]);
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

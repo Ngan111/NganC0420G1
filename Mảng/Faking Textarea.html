@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Type Anything Slowly</title>
+    <script>
+        var messenger = new Array(), n= "";
+            messenger = [" ","I"," ", "A","M", " ", "S","C","A","R","L","E","T","T"," ","S","L","Y","T","H","E","R","I","N"];
+        function typeTextarea() {
+            t = document.f.txt.value;
+            j = t.length;
+            if (j>0)
+            {
+                for (var i=1;i<=j;i++) {
+                    n = n + messenger[i];
+                    if (i == 24) {
+                        document.f.txt.value = "";
+                        n = "";
+                    }
+                }
+            }
+            document.f.txt.value = n;
+            n = "";
+            setTimeout("typeTextarea()",1);
+        }
+    </script>
+</head>
+<body>
+<center>
+    <h3> Type Anything you want</h3>
+    <form name ="f">
+    <textarea name="txt" cols="40" rows="20" onkeydown="typeTextarea();"></textarea>
+    </form>
+</center>
+</body>
+</html>
